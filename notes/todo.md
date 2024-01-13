@@ -8,7 +8,9 @@
         - fit inside window
 
 - system for adding new images
-    - load multiple json from list and merge them
+    <!-- - load multiple json from list and merge them -->
+    <!-- - also load images based on which json they're from. json sets the base folder path -->
+    - test with path files
 
 - update and break out styles from main styles
 - break apart js from lib and non page specific
@@ -24,8 +26,12 @@
 - add info
     - gregnet project
     - links
-
+- make menu design better
+    - ? polish up ?
 - fade ui on inactivity
+    - just menu
+
+- remove console logs
 
 - url params
     - dark mode light mode
@@ -35,6 +41,7 @@
 - hash
     - test results of random hash
     - break hash out into a single function that takes numbers
+    - try having hash based on a text block and start by choosing characters out of it 'A760BCDEF$#Q;etc'
 
 - add text descriptions for each image
 - alt tags to images

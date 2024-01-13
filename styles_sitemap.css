@@ -1,0 +1,56 @@
+
+#content{
+
+  padding-top: 50px;
+}
+
+.data-container {
+    position: relative;
+    border-bottom: 3px solid #333;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: top;
+    min-width: 480px;
+}
+.data-container.selected
+{
+  /* border: 4px dashed #ababab; */
+  background-color: #333;
+}
+.data-container p{
+  margin: 0;
+  padding-left: 20px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.selection
+{
+  /* display: block; */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transform: scale(1.5);
+}
+
+#options{
+  position: fixed;
+  top: 0px;
+  width: 500px;
+  background-color: #333333;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#options button {
+  margin-right: 10px; /* Add margin between buttons */
+}
+
+#details{
+  margin-left: auto;
+}

@@ -9,7 +9,9 @@
 	<meta property="og:type" content="website">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="sitemap_styles.css">
+
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles_sitemap.css">
 	<title>Mattress Minute Sitemap</title>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,10 +19,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body class="dark-mode">
-    <div id="content"></div>
+    <ul id="content"></ul>
     <div id="options">
         <button>by date</button>
         <button>by id</button>
+        <button id="get-selected-button">getSelected</button>
+        <button id="unselect-all-button">unSelectAll</button>
         <div id="details">
             file count: 1000
         </div>
