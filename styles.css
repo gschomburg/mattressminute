@@ -1,0 +1,103 @@
+/* general styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+  font-family: 'Barlow', sans-serif;
+
+  transition: background-color 0.5s ease;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 2px dashed #fff;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.top-left {
+  position: fixed;
+  top: 0px; /* Adjust the distance from the bottom */
+  left: 0px; /* Adjust the distance from the left */
+  padding: 10px;
+  /* border: 1px solid red; */
+}
+
+.bottom-left {
+  position: fixed;
+  bottom: 0px; /* Adjust the distance from the bottom */
+  left: 0px; /* Adjust the distance from the left */
+  padding: 10px;
+  /* border: 1px solid red; */
+}
+
+/* menu */
+#menu.open{
+  background-color: #333333;
+  color: #dadada;
+}
+#menu-toggle-button{
+  margin-bottom: 10px;
+}
+#dropdown{
+  display: none;
+}
+.open #dropdown{
+  display: block;
+}
+
+/* view modes */
+.light-mode{
+  background-color: #dadada;
+  color: #fff;
+}
+.dark-mode{
+  background-color: #000000;
+  color: #dadada;
+}
+
+/* image transforms */
+.centered-square {
+  position: relative;
+  width: 95vmin; /* Adjust the size of the square as needed */
+  height: 95vmin; /* Adjust the size of the square as needed */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.centered-square .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+#m-image-temp
+{
+  opacity: .5;
+  /* left: 50px; */
+}
+
+/*meta text styles*/
+.time{
+  font-size: 4vw;
+  margin-bottom: 0vw;
+}
+.meta{
+  font-size: 1.5vw;
+  /* margin-bottom: 0vw; */
+  margin-top: 1vw;
+}
