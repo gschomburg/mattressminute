@@ -32,7 +32,7 @@ button, input[type="submit"], input[type="reset"] {
   position: fixed;
   top: 0px; /* Adjust the distance from the bottom */
   left: 0px; /* Adjust the distance from the left */
-  padding: 10px;
+  padding: 20px;
   /* border: 1px solid red; */
 }
 
@@ -40,7 +40,7 @@ button, input[type="submit"], input[type="reset"] {
   position: fixed;
   bottom: 0px; /* Adjust the distance from the bottom */
   left: 0px; /* Adjust the distance from the left */
-  padding: 10px;
+  padding: 20px;
   /* border: 1px solid red; */
 }
 
@@ -85,9 +85,21 @@ button, input[type="submit"], input[type="reset"] {
   position: absolute;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-#m-image-temp
+#m-image-preload{
+  display: none;
+  position: fixed;
+  top: 0px; /* Adjust the distance from the bottom */
+  right: 0px; /* Adjust the distance from the left */
+  padding: 10px;
+  width: 10vw;
+}
+.admin #m-image-preload{
+  display: inherit;
+}
+#m-image-trans
 {
-  opacity: .5;
+  /* opacity: .5; */
+  pointer-events: none;
   /* left: 50px; */
 }
 
