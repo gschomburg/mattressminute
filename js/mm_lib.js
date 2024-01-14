@@ -56,12 +56,26 @@ function getMattressData(hour, minute){
     var div = minute/hour;
     var extrawild = mult+div;
     var numStr = "min" + hour.toString() + minute.toString() + dayOfYear.toString() + extrawild.toString();
-    console.log("numStr", numStr);
     var timeNum = simpleHash(numStr);
-    console.log("timeNum", timeNum);
+    // console.log("numStr", numStr);
+    // console.log("timeNum", timeNum);
+    //show life style images at the top of every hour
+    if(minute==0){
+        //return a lifestyle image
+        var lifestyle = filterMattressData('lifestyle');
+        // var index = timeNum%lifestyle.length;
+        // console.log('lifestyle:', lifestyle)
+        return lifestyle[timeNum%lifestyle.length];
+    }
     var index = timeNum%mattress_data.length;
     return mattress_data[index];
     // return minute;
+}
+
+function filterMattressData(tag){
+    //only get data that has matching tag
+    return mattress_data.filter(item => item.tags && item.tags.includes(tag));
+    // return mattress_data.filter(item => item.tags.includes(tag));
 }
 
 function getRandomData(){
@@ -118,7 +132,7 @@ function formatMetaData(data){
     }
     if(data.lat_long_dms != null){
     let formLatLong = formatLatLong(data.lat_long_dms)
-    formatted+=`<a href="${formLatLong.googleMapsLink}">${formLatLong.formattedString}</a><br>`;
+    formatted+=`<a href="${formLatLong.googleMapsLink}" target="_blank">${formLatLong.formattedString}</a><br>`;
     }
     if(data.make != null){
     formatted+=`${data.make} ${data.model}<br>`;

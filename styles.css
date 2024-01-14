@@ -23,7 +23,7 @@ li {
 a{
   text-decoration: none;
   color: #fff;
-  border-bottom: 2px dashed #fff;
+  border-bottom: .1em dashed #fff;
 }
 
 button, input[type="submit"], input[type="reset"] {

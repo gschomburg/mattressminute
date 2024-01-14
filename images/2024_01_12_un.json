@@ -27,8 +27,7 @@
     "date_taken": "2015:04:24 09:31:34",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": null,
-    "tags": "lifestyle"
+    "lat_long_dms": null
   },
   {
     "id": "0006",
@@ -58,8 +57,7 @@
     "date_taken": "2015:04:24 09:30:43",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": null,
-    "tags": "lifestyle"
+    "lat_long_dms": null
   },
   {
     "id": "0022",
@@ -89,8 +87,7 @@
     "date_taken": "2015:09:08 19:26:27",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,42,37.9,N+73,56,55.7,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,37.9,N+73,56,55.7,W"
   },
   {
     "id": "0033",
@@ -220,8 +217,7 @@
     "date_taken": "2015:05:30 17:03:12",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,42,21.8,N+73,55,8.3,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,21.8,N+73,55,8.3,W"
   },
   {
     "id": "0089",
@@ -401,8 +397,7 @@
     "date_taken": "2016:01:10 09:00:50",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,41,28.1,N+73,56,46.0,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,28.1,N+73,56,46.0,W"
   },
   {
     "id": "0161",
@@ -412,8 +407,7 @@
     "date_taken": "2016:01:10 09:00:19",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,41,28.0,N+73,56,46.4,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,28.0,N+73,56,46.4,W"
   },
   {
     "id": "0162",
@@ -533,8 +527,7 @@
     "date_taken": "2012:10:17 13:29:44",
     "make": "Apple",
     "model": "iPhone 4S",
-    "lat_long_dms": "40,43,27.6,N+74,0,20.4,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,43,27.6,N+74,0,20.4,W"
   },
   {
     "id": "0209",
@@ -854,8 +847,7 @@
     "date_taken": "2011:09:23 18:27:52",
     "make": "Apple",
     "model": "iPhone 3GS",
-    "lat_long_dms": "40,42,37.8,N+73,57,25.8,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,37.8,N+73,57,25.8,W"
   },
   {
     "id": "0261",
@@ -1375,8 +1367,7 @@
     "date_taken": "2007:02:21 09:30:03",
     "make": "Canon",
     "model": "Canon IXY DIGITAL 600",
-    "lat_long_dms": null,
-    "tags": "lifestyle"
+    "lat_long_dms": null
   },
   {
     "id": "0316",
@@ -2566,8 +2557,7 @@
     "date_taken": "2015:05:01 09:10:37",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,42,12.6,N+73,54,46.7,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,12.6,N+73,54,46.7,W"
   },
   {
     "id": "0437",
@@ -2877,8 +2867,7 @@
     "date_taken": "2009:10:12 13:23:42",
     "make": "Apple",
     "model": "iPhone 3GS",
-    "lat_long_dms": "40,42,22.2,N+73,56,3.6,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,22.2,N+73,56,3.6,W"
   },
   {
     "id": "0471",
@@ -2958,8 +2947,7 @@
     "date_taken": "2015:06:09 09:05:56",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,42,10.2,N+73,54,44.7,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,10.2,N+73,54,44.7,W"
   },
   {
     "id": "0479",
@@ -3269,8 +3257,7 @@
     "date_taken": "2015:11:11 09:14:02",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,42,9.9,N+73,54,45.3,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,9.9,N+73,54,45.3,W"
   },
   {
     "id": "0510",
@@ -3330,8 +3317,7 @@
     "date_taken": "2015:12:08 09:29:31",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,42,14.3,N+73,54,45.9,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,14.3,N+73,54,45.9,W"
   },
   {
     "id": "0516",
@@ -3351,8 +3337,7 @@
     "date_taken": "2015:12:12 15:17:55",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,41,24.7,N+73,57,17.8,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,24.7,N+73,57,17.8,W"
   },
   {
     "id": "0519",
@@ -3372,8 +3357,7 @@
     "date_taken": "2015:12:18 12:51:26",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "44,38,37.7,N+91,18,33.0,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "44,38,37.7,N+91,18,33.0,W"
   },
   {
     "id": "0521",
@@ -3403,8 +3387,7 @@
     "date_taken": "2016:01:16 20:46:00",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,41,26.0,N+73,56,48.0,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,26.0,N+73,56,48.0,W"
   },
   {
     "id": "0524",
@@ -3424,8 +3407,7 @@
     "date_taken": "2016:01:17 10:44:05",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,41,25.5,N+73,56,47.7,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,25.5,N+73,56,47.7,W"
   },
   {
     "id": "0526",
@@ -3515,8 +3497,7 @@
     "date_taken": "2016:02:01 09:19:34",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,41,28.8,N+73,56,43.4,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,28.8,N+73,56,43.4,W"
   },
   {
     "id": "0535",
@@ -4036,8 +4017,7 @@
     "date_taken": "2017:01:03 19:58:54",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,41,26.0,N+73,56,48.7,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,26.0,N+73,56,48.7,W"
   },
   {
     "id": "0596",
@@ -4207,8 +4187,7 @@
     "date_taken": "2017:03:18 10:21:15",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,41,27.9,N+73,56,44.0,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,27.9,N+73,56,44.0,W"
   },
   {
     "id": "0615",
@@ -5078,8 +5057,7 @@
     "date_taken": "2017:11:26 12:07:59",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,41,50.0,N+73,56,28.1,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,50.0,N+73,56,28.1,W"
   },
   {
     "id": "0704",
@@ -5199,8 +5177,7 @@
     "date_taken": "2018:05:28 08:39:40",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,42,8.5,N+73,56,25.4,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,8.5,N+73,56,25.4,W"
   },
   {
     "id": "0716",
@@ -5350,8 +5327,7 @@
     "date_taken": "2018:07:08 18:10:44",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,41,27.9,N+73,56,44.2,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,27.9,N+73,56,44.2,W"
   },
   {
     "id": "0731",
@@ -5961,8 +5937,7 @@
     "date_taken": "2019:05:23 10:34:28",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,42,14.1,N+73,56,5.8,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,14.1,N+73,56,5.8,W"
   },
   {
     "id": "0792",
@@ -5972,8 +5947,7 @@
     "date_taken": "2019:05:23 10:34:53",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,42,13.9,N+73,56,6.0,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,13.9,N+73,56,6.0,W"
   },
   {
     "id": "0793",
@@ -6103,8 +6077,7 @@
     "date_taken": "2019:06:17 09:56:11",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,42,17.2,N+73,56,6.1,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,17.2,N+73,56,6.1,W"
   },
   {
     "id": "0806",
@@ -6264,8 +6237,7 @@
     "date_taken": "2019:08:20 08:49:38",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,42,16.2,N+73,56,5.8,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,16.2,N+73,56,5.8,W"
   },
   {
     "id": "0822",
@@ -6295,8 +6267,7 @@
     "date_taken": "2019:09:11 18:51:27",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,42,16.9,N+73,56,2.6,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,16.9,N+73,56,2.6,W"
   },
   {
     "id": "0825",
@@ -6306,8 +6277,7 @@
     "date_taken": "2019:09:15 10:27:29",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,41,26.4,N+73,57,2.2,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,26.4,N+73,57,2.2,W"
   },
   {
     "id": "0826",
@@ -6377,8 +6347,7 @@
     "date_taken": "2019:09:19 10:19:41",
     "make": "Apple",
     "model": "iPhone 6",
-    "lat_long_dms": "40,42,21.6,N+73,56,8.9,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,21.6,N+73,56,8.9,W"
   },
   {
     "id": "0833",
@@ -6508,8 +6477,7 @@
     "date_taken": "2023:06:21 22:41:16",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "37,46,27.5,N+122,25,9.1,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "37,46,27.5,N+122,25,9.1,W"
   },
   {
     "id": "0846",
@@ -6539,8 +6507,7 @@
     "date_taken": "2023:12:19 19:52:40",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "44,56,19.8,N+93,17,3.2,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "44,56,19.8,N+93,17,3.2,W"
   },
   {
     "id": "0850",
@@ -6560,8 +6527,7 @@
     "date_taken": "2023:12:19 19:52:54",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "44,56,20.1,N+93,17,3.8,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "44,56,20.1,N+93,17,3.8,W"
   },
   {
     "id": "0852",
@@ -6581,8 +6547,7 @@
     "date_taken": "2023:06:05 07:59:03",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "40,41,45.2,N+73,56,36.6,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,45.2,N+73,56,36.6,W"
   },
   {
     "id": "0855",
@@ -6732,8 +6697,7 @@
     "date_taken": "2020:02:29 12:59:25",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "40,41,28.1,N+73,56,43.8,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,28.1,N+73,56,43.8,W"
   },
   {
     "id": "0870",
@@ -7153,8 +7117,7 @@
     "date_taken": "2020:10:13 15:11:24",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "40,41,28.0,N+73,56,46.0,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,28.0,N+73,56,46.0,W"
   },
   {
     "id": "0912",
@@ -7324,8 +7287,7 @@
     "date_taken": "2020:12:25 10:47:31",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "40,41,32.6,N+73,56,55.1,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,32.6,N+73,56,55.1,W"
   },
   {
     "id": "0929",
@@ -7655,8 +7617,7 @@
     "date_taken": "2021:04:20 14:45:37",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "40,41,31.9,N+73,56,44.5,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,31.9,N+73,56,44.5,W"
   },
   {
     "id": "0964",
@@ -7806,8 +7767,7 @@
     "date_taken": "2021:05:05 16:15:40",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "40,41,28.0,N+73,56,43.8,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,28.0,N+73,56,43.8,W"
   },
   {
     "id": "0979",
@@ -8757,8 +8717,7 @@
     "date_taken": "2022:10:17 07:44:11",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "40,41,29.2,N+73,56,40.3,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,29.2,N+73,56,40.3,W"
   },
   {
     "id": "1074",
@@ -8838,8 +8797,7 @@
     "date_taken": "2022:11:28 07:50:08",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "40,41,26.8,N+73,56,54.1,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,26.8,N+73,56,54.1,W"
   },
   {
     "id": "1082",
@@ -8909,8 +8867,7 @@
     "date_taken": "2023:02:06 16:02:21",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "40,42,19.8,N+73,55,59.3,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,42,19.8,N+73,55,59.3,W"
   },
   {
     "id": "1089",
@@ -9040,8 +8997,7 @@
     "date_taken": "2023:04:15 16:33:30",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "40,44,50.8,N+73,59,38.9,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,44,50.8,N+73,59,38.9,W"
   },
   {
     "id": "1102",
@@ -9121,8 +9077,7 @@
     "date_taken": "2023:03:22 15:32:10",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "40,41,40.2,N+73,56,37.9,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,40.2,N+73,56,37.9,W"
   },
   {
     "id": "1112",
@@ -9172,8 +9127,7 @@
     "date_taken": "2023:04:28 15:04:10",
     "make": "Apple",
     "model": "iPhone 11 Pro",
-    "lat_long_dms": "40,41,43.9,N+73,56,36.1,W",
-    "tags": "lifestyle"
+    "lat_long_dms": "40,41,43.9,N+73,56,36.1,W"
   },
   {
     "id": "1117",

@@ -33,8 +33,12 @@ function buildPage(dataArray) {
         checkbox.value = data.id; // Assuming 'id' is the unique identifier for each item
 
         var description = document.createElement('p');
-        var additionalMeta = `${data.filename}<br/>set: ${data.data_set}.json`;
-        description.innerHTML = `${additionalMeta}<br/>${formatMetaData(data)}`; //`ID: ${data.id}<br/>Taken with: ${data.make} ${data.model}<br/>${data.date_taken}`;
+        // var additionalMeta = `${data.filename}<br/>size:${data.width}x${data.height}<br/>set: ${data.data_set}.json`;
+        var tagStr="";
+        if(data.tags!=null && data.tags!=undefined){
+            tagStr = `<br/>tags: ${data.tags}`
+        }
+        description.innerHTML = `${data.filename}<br/>${formatMetaData(data)}<br/>size:${data.width}x${data.height}<br/>set: ${data.data_set}.json${tagStr}`; //`ID: ${data.id}<br/>Taken with: ${data.make} ${data.model}<br/>${data.date_taken}`;
 
         // Append elements to the container
         imagelink.append(image);

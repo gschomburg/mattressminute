@@ -151,4 +151,12 @@ body, html {
     font-size: 1em;
     /* margin-bottom: 0vw; */
     margin-top: .5em;
+    margin-bottom: 0em;
   }
+
+  /* size considerations */
+  @media (min-width: 1500px), (min-height: 1500px) {
+    #info-display {
+        font-size: 40px;
+    }
+}

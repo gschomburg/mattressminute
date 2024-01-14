@@ -35,7 +35,7 @@ def convert_gps_to_dms(gps_info):
         # Latitude
         dirNS = gps_info.get(1)
         degrees, minutes, seconds = gps_info.get(2)
-        # print(gps_info.get(2))
+        print('d m s', gps_info.get(2))
         # print(seconds)
 
         #extract seconds from minutes
@@ -44,7 +44,8 @@ def convert_gps_to_dms(gps_info):
         # calc_seconds = float(fractional_minutes * 60)
         # print('calc seconds:', calc_seconds)
         minute_seconds = seconds_from_minutes(minutes)
-        lat = f"{int(abs(degrees))},{int(minutes)},{minute_seconds:.1f},{dirNS}"
+        seconds += minute_seconds
+        lat = f"{int(abs(degrees))},{int(minutes)},{seconds:.1f},{dirNS}"
 
         # lat = f"{float(seconds)}"
         # return lat
@@ -53,7 +54,8 @@ def convert_gps_to_dms(gps_info):
         dirEW = gps_info.get(3)
         degrees2, minutes2, seconds2 = gps_info.get(4)
         minute_seconds2 = seconds_from_minutes(minutes2)
-        long = f"{int(abs(degrees2))},{int(minutes2)},{minute_seconds2:.1f},{dirEW}"
+        seconds2 += minute_seconds2
+        long = f"{int(abs(degrees2))},{int(minutes2)},{seconds2:.1f},{dirEW}"
 
         # long = f"{int(abs(degrees2))},{int(minutes2)},{seconds2.numerator / seconds2.denominator:.1f},{dirEW}"
         
@@ -131,7 +133,7 @@ def create_json_from_folder(folder_path, output_json_path):
         json.dump(image_metadata_list, json_file, indent=2, cls=CustomJSONEncoder)
   
 # vars
-input_folder = 'batched'
-output_json = '2024_01_12_v3.json'
+input_folder = '2024_01_12'
+output_json = '2024_01_12_v6.json'
 
 create_json_from_folder(input_folder, output_json)
