@@ -21,6 +21,9 @@ function init(){
     var updateTimeInterval = 10000;
     setInterval(updateTime, updateTimeInterval);
 
+    //every second
+    setInterval(updateTicker, 1000);
+
     // Add click event listener to change the image
     const imageContainer = document.getElementById('image-container');
     imageContainer.addEventListener('click', function(){
@@ -33,7 +36,11 @@ function init(){
     //show the new image and kick this off
     updateTime();
 }
-
+function updateTicker()
+{
+  const ticker = document.getElementById('ticker');
+  ticker.classList.toggle('down');
+}
 //UI STUFF
 function setupMenu(){
   //menu clicks
