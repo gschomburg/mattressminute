@@ -3,6 +3,9 @@
 <!-- - add ui for selecting photos in sitemap and a way to output selected datas -->
 
 - take out dupes in sitemap
+    - clear out files and rebuild json
+
+- add image dimensions to sitemap
 
 <!-- - other views
     - not a circle

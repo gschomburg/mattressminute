@@ -89,6 +89,7 @@ body, html {
   {
     object-fit: contain;
     /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
   }
 
   #ticker
@@ -96,8 +97,8 @@ body, html {
     position: relative;
     /* top:20px;
     right: 40px; */
-    width: 15vw;
-    height: .5vw;
+    width: 10em;
+    height: .35em;
     /* background-color: red; */
   }
   .tick-bar
@@ -131,18 +132,23 @@ body, html {
     /* left: 50px; */
   }
   
+  #info-display
+  {
+    font-size: 2vmax;
+  }
   /*meta text styles*/
   .time{
-    font-size: 5vw;
+    /* font-size: 5vw; */
+    font-size: 3em;
     margin-bottom: 0vw;
   }
   .am-pm
   {
-    font-size: 3vw;
+    font-size: .6em;
     font-weight: 800;
   }
   .meta{
-    font-size: 1.5vw;
+    font-size: 1em;
     /* margin-bottom: 0vw; */
-    margin-top: 1vw;
+    margin-top: .5em;
   }
