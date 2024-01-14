@@ -1,5 +1,5 @@
 # TODO
-- favicon
+<!-- - favicon -->
 - some sort of second blip/hand
 
 - other mobile stuff
@@ -21,7 +21,7 @@
     - fade ui on inactivity
         - just menu
 
-- remove console logs
+<!-- - remove console logs -->
 
 - url params
     - dark mode light mode
