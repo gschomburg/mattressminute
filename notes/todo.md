@@ -1,19 +1,21 @@
 # TODO
 
-- add ui for selecting photos in sitemap and a way to output selected datas
+<!-- - add ui for selecting photos in sitemap and a way to output selected datas -->
 
-- other views
+- take out dupes in sitemap
+
+<!-- - other views
     - not a circle
         - fill window
-        - fit inside window
+        - fit inside window -->
 
 - system for adding new images
     <!-- - load multiple json from list and merge them -->
     <!-- - also load images based on which json they're from. json sets the base folder path -->
     - test with path files
 
-- update and break out styles from main styles
-- break apart js from lib and non page specific
+<!-- - update and break out styles from main styles -->
+<!-- - break apart js from lib and non page specific -->
 
 - some sort of second blip/hand
 
@@ -28,6 +30,7 @@
     - links
 - make menu design better
     - ? polish up ?
+    - underline on link should also scale with text
 - fade ui on inactivity
     - just menu
 

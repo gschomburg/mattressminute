@@ -36,25 +36,64 @@ function init(){
 
 //UI STUFF
 function setupMenu(){
-  document.getElementById('menu').addEventListener('click', function() {
-  // Toggle the 'open' class on the dropdown
-  // console.log('toggle');
-  document.getElementById('menu').classList.toggle('open');
+  //menu clicks
+  document.getElementById('menu-toggle-button').addEventListener('click', function() {
+    // Toggle the 'open' class on the dropdown
+    // console.log('toggle');
+    document.getElementById('menu').classList.toggle('open');
   });
+  document.addEventListener('click', function (event) {
+    const menu = document.getElementById('menu');
+    // const toggleButton = document.getElementById('toggleButton');
+
+    if (!menu.contains(event.target)) {
+      menu.classList.remove('open');
+    }
+  });
+
+  //menu items
   document.getElementById('fullscreen-button').addEventListener('click', function() {
-  if (document.fullscreenElement) {
-      // If already in fullscreen, exit fullscreen
-      document.exitFullscreen();
-  } else {
-      // If not in fullscreen, request fullscreen
-      document.documentElement.requestFullscreen();
-  }
+    if (document.fullscreenElement) {
+        // If already in fullscreen, exit fullscreen
+        document.exitFullscreen();
+    } else {
+        // If not in fullscreen, request fullscreen
+        document.documentElement.requestFullscreen();
+    }
+    closeMenu();
   });
-  document.getElementById('mode-button').addEventListener('click', function() {
-  const body = document.body;
-  body.classList.toggle('light-mode');
-  body.classList.toggle('dark-mode');
+  var viewSelect = document.getElementById("view-select");
+  var modeSelect = document.getElementById("mode-select");
+  viewSelect.addEventListener("change", function () {
+    // Perform some action when the view selection changes
+    // console.log("View selection changed:", viewSelect.value);
+    const body = document.body;
+    body.classList.remove(currentView);
+    currentView = viewSelect.value;
+    body.classList.add(currentView);
+    closeMenu();
   });
+
+  modeSelect.addEventListener("change", function () {
+    // Perform some action when the view selection changes
+    // console.log("View selection changed:", viewSelect.value);
+    const body = document.body;
+    body.classList.remove(currentMode);
+    currentMode = modeSelect.value;
+    body.classList.add(currentMode);
+    closeMenu();
+  });
+  // document.getElementById('mode-button').addEventListener('click', function() {
+  // const body = document.body;
+  // body.classList.toggle('light-mode');
+  // body.classList.toggle('dark-mode');
+  // });
+}
+function openMenu(){
+  document.getElementById('menu').classList.add('open');
+}
+function closeMenu(){
+  document.getElementById('menu').classList.remove('open');
 }
 
 //time and images
@@ -74,9 +113,9 @@ function updateTime() {
   
   //display time text
   // Format the time (12-hour format)
-  const formattedTime = `${hours % 12 || 12}:${minutes < 10 ? '0' : ''}${minutes} ${hours < 12 ? 'AM' : 'PM'}`;
+  const formattedTime = `${hours % 12 || 12}:${minutes < 10 ? '0' : ''}${minutes} <span class="am-pm">${hours < 12 ? 'AM' : 'PM'}<span>`;
 
-  timeDisplay.textContent = `${formattedTime}`;
+  timeDisplay.innerHTML = `${formattedTime}`;
 }
 
 function changeImage(randomize=false) {
@@ -127,6 +166,10 @@ function changeImage(randomize=false) {
   mainImageTrans.src = mainImage.src;
   mainImageTrans.style.transform = 'rotate(0deg)';
   
+  if(currentView != "view-circle"){
+    rotValue = 0;
+  }
+  
   mainImage.style.transition = 'none';
   mainImage.src = newImageSrc;
   mainImage.style.transform = 'rotate(-'+rotValue+'deg)';
@@ -154,8 +197,10 @@ function updateMetaData(data){
   metaDisplay.innerHTML = formatMetaData(data);//formatted;
 }
 
-//globals
+//state
 var loading = true;
+var currentView="view-circle"
+var currentMode="light-mode"
 var img_index=0;
 var mattress_data=[]
 var current_data=null

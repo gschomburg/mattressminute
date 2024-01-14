@@ -40,6 +40,9 @@ function getImgIndex(index){
     // const currentTime = new Date();
     return index%mattress_data.length;
 }
+function getObjectsByIds(idsToFilter, array) {
+    return array.filter(obj => idsToFilter.includes(obj.id));
+}
 
 function getMattressData(hour, minute){
     //add in the day of the year

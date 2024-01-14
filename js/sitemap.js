@@ -70,6 +70,13 @@ function getSelectedItems() {
     checkboxes.forEach(function (checkbox) {
         selectedIds.push(checkbox.value);
     });
+    const filteredObjects = getObjectsByIds(selectedIds, mattress_data);
+    var jsonStr = JSON.stringify(filteredObjects)
+    navigator.clipboard.writeText(jsonStr)
+                .then(() => alert("Copied json to clipboard: " + filteredObjects.length + " items"))
+                .catch(err => console.error("Unable to copy to clipboard", err));
+
+    // alert("Copied to clipboard: " + content);
 
     return selectedIds;
 }
@@ -95,7 +102,9 @@ function init()
 
     //ui actions
     document.getElementById('get-selected-button').addEventListener('click', function() {
-        console.log(getSelectedItems());
+        var dataItems = getSelectedItems();
+        console.log(dataItems);
+
     });
     document.getElementById('unselect-all-button').addEventListener('click', function() {
         console.log(unSelectAll());

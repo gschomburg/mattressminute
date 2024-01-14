@@ -17,28 +17,39 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body class="light-mode">
-	<div class="top-left" id="menu">
-		<button id="menu-toggle-button">menu</button>
-		<div class="" id="dropdown">
-			<button id="fullscreen-button">fullscreen</button></br>
-			<!-- link</br> -->
-			<!-- view select</br> -->
-			<button id="mode-button">mode select</button></br>
+	<body class="light-mode view-circle">
+		<div class="top-left" id="menu">
+			<button id="menu-toggle-button">menu</button>
+			<div class="" id="dropdown">
+				<button id="fullscreen-button">fullscreen</button></br>
+				<!-- link</br> -->
+				<select id="view-select">
+					<option value="view-circle">circle</option>
+					<option value="view-fill">fill</option>
+					<option value="view-fit">fit</option>
+				  </select></br>
+				  <select id="mode-select">
+					<option value="light-mode">light mode</option>
+					<option value="dark-mode">dark mode</option>
+				  </select></br>
+				<!-- <button id="mode-button">mode select</button></br> -->
+			</div>
 		</div>
-	</div>
-	<img src="images/const1.jpg" alt="alt image description" id="m-image-preload">
-  <div class="centered-square" id="image-container">
-	<img src="images/const1.jpg" alt="a photo of a mattress" class="image" id="m-image">
-	<img src="images/const1.jpg" alt="transition only" class="image" id="m-image-trans" >
-  </div>
-  <div class="bottom-left" id="info-display">
-	<!-- Your content for the bottom-left div goes here -->
-	<h2 id="time-display" class="time">00:00 MM</h2>
-	<p id="meta-display" class="meta">
-	</p>
-  </div>
-  <script src="js/mm_lib.js"></script>
-  <script src="js/main.js"></script>
-</body>
+		<img src="images/const1.jpg" alt="alt image description" id="m-image-preload">
+
+		<div class="centered-square" id="image-container">
+			<img src="images/const1.jpg" alt="a photo of a mattress" class="image" id="m-image">
+			<img src="images/const1.jpg" alt="transition only" class="image" id="m-image-trans" >
+		</div>
+		<!-- <div id="ticker">ticker</div> -->
+		<div class="bottom-left" id="info-display">
+			<!-- Your content for the bottom-left div goes here -->
+			<h2 id="time-display" class="time">00:00 MM</h2>
+			<div id="ticker"></div> 
+			<p id="meta-display" class="meta">
+			</p>
+		</div>
+		<script src="js/mm_lib.js"></script>
+		<script src="js/main.js"></script>
+	</body>
 </html>
