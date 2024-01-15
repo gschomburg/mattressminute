@@ -18,11 +18,11 @@ function init(){
     // console.log('param2:', param2);
 
     // start the timer
-    var updateTimeInterval = 10000;
+    var updateTimeInterval = 1000;
     setInterval(updateTime, updateTimeInterval);
 
     //every second
-    setInterval(updateTicker, 1000);
+    // setInterval(updateTicker, 1000);
 
     // Add click event listener to change the image
     const imageContainer = document.getElementById('image-container');
@@ -36,11 +36,11 @@ function init(){
     //show the new image and kick this off
     updateTime();
 }
-function updateTicker()
-{
-  const ticker = document.getElementById('ticker');
-  ticker.classList.toggle('down');
-}
+// function updateTicker()
+// {
+//   const ticker = document.getElementById('ticker');
+//   ticker.classList.toggle('down');
+// }
 //UI STUFF
 function setupMenu(){
   //menu clicks
@@ -109,6 +109,7 @@ function updateTime() {
   const currentTime = new Date();
   const hours = currentTime.getHours();
   const minutes = currentTime.getMinutes();
+  const seconds = currentTime.getSeconds();
   if(currentHour != hours || currentMinute!=minutes){
       currentHour = hours;
       currentMinute = minutes;
@@ -118,6 +119,8 @@ function updateTime() {
   currentHour = hours;
   currentMinute = minutes;
   
+  const tickBar = document.getElementById('tick-bar');
+  tickBar.style.width = `${(1 - (seconds/60)) * 100}%`;
   //display time text
   // Format the time (12-hour format)
   const formattedTime = `${hours % 12 || 12}:${minutes < 10 ? '0' : ''}${minutes} <span class="am-pm">${hours < 12 ? 'AM' : 'PM'}<span>`;
@@ -190,7 +193,7 @@ function changeImage(randomize=false) {
       // mainImage.style.opacity = 1;
       mainImageTrans.style.transition = 'opacity '+fadeDuration+'s ease-out, transform '+cssDuration+'s cubic-bezier(0.175, 0.885, 0.32, 1.275)'; //should be transition
       mainImageTrans.style.opacity = 0;
-      mainImageTrans.style.transform = 'rotate('+rotValue+'deg)';
+      mainImageTrans.style.transform = 'rotate('+rotValue+'deg) translateZ(0)';
 
       mainImage.style.transition = 'opacity '+fadeDuration+'s ease-out, transform '+cssDuration+'s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
       mainImage.style.transform = 'rotate(0deg)';

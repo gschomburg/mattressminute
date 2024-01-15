@@ -98,11 +98,51 @@ function unSelectAll(){
         item.classList.remove('selected');
     });
 }
+function analyzePlot(data)
+{
+    var average = data.reduce((sum, value) => sum + value, 0) / data.length;
+    var minValue = Math.min(...data);
+    var maxValue = Math.max(...data);
+    return `AVG:${Math.floor(average)} | MIN:${minValue} | MAX:${maxValue}`
+}
+function plotDataDist(){
+    var info = document.getElementById('plot-info');
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var data = testHash();
+    info.innerHTML = analyzePlot(data);
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: data.map((_, index) => index), // X-coordinates are indices
+          datasets: [{
+            label: 'Dist for Year',
+            data: data, // Y-values are array values
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+          }]
+        },
+        options: {
+          scales: {
+            x: {
+              type: 'linear',
+              position: 'bottom'
+            },
+            y: {
+              beginAtZero: true,
+            }
+          }
+        }
+      });
+}
 
 function init()
 {
     //make the page
     buildPage(mattress_data);
+
+    //plotting
+    plotDataDist();
 
     //ui actions
     document.getElementById('get-selected-button').addEventListener('click', function() {

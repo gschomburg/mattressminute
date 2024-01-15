@@ -1,7 +1,17 @@
 
 #content{
-
   padding-top: 50px;
+}
+
+#plot-info
+{
+  /* background-color: red; */
+  /* height: 500px; */
+  /* width: 500px; */
+  text-align: center;
+  color: #dadada;
+  /* background-color: #dadada; */
+  padding: 5px;
 }
 
 .data-container {

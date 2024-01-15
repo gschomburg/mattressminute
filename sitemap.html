@@ -17,9 +17,16 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="dark-mode">
-    <ul id="content"></ul>
+    <ul id="content">
+        <div id="testing">
+            <!-- <p>img distribution</p> -->
+            <canvas id="myChart" width="900" height="200"></canvas>
+            <div id="plot-info">info</div>
+        </div>
+    </ul>
     <div id="options">
         <button>by date</button>
         <button>by id</button>

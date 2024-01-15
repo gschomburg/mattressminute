@@ -1,23 +1,28 @@
 # TODO
 <!-- - favicon -->
-- some sort of second blip/hand
+<!-- - some sort of second blip/hand
+    - think of some other ideas -->
 
 - other mobile stuff
 - min max css stuff
 
+- move styles to styles folder
+
+- maybe bug in transition on mac chrome?
+
 - site map
     - select all
-    - edit tags
+    - edit tags with field
     - sort by id or by date
+        - turn into a drop down select box
 <!-- - add ui for selecting photos in sitemap and a way to output selected datas -->
 
 - add info
     - gregnet project
     - links
-- make menu design better
+<!-- - make menu design better
     - ? polish up ?
-    - menu icon instead of text?
-    <!-- - underline on link should also scale with text -->
+    - menu icon instead of text? -->
     - fade ui on inactivity
         - just menu
 
@@ -28,10 +33,10 @@
     - view type
     - savable from url string
 
-- hash
+<!-- - hash
     - test results of random hash
     - break hash out into a single function that takes numbers
-    - try having hash based on a text block and start by choosing characters out of it 'A760BCDEF$#Q;etc'
+    - try having hash based on a text block and start by choosing characters out of it 'A760BCDEF$#Q;etc' -->
 
 - add text descriptions for each image
 - alt tags to images

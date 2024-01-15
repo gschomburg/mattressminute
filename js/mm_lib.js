@@ -52,11 +52,12 @@ function getMattressData(hour, minute){
     const oneDay = 24 * 60 * 60 * 1000; // hours * minutes * seconds * milliseconds
     const dayOfYear = Math.floor(diff / oneDay);
 
-    var mult = hour*minute;
-    var div = minute/hour;
-    var extrawild = mult+div;
-    var numStr = "min" + hour.toString() + minute.toString() + dayOfYear.toString() + extrawild.toString();
-    var timeNum = simpleHash(numStr);
+    
+    // var mult = hour*minute;
+    // var div = minute/hour;
+    // var extrawild = mult+div;
+    // var numStr = "min" + hour.toString() + minute.toString() + dayOfYear.toString() + extrawild.toString();
+    var timeNum = getHashIndexForTime(dayOfYear, hour, minute);//simpleHash(numStr);
     // console.log("numStr", numStr);
     // console.log("timeNum", timeNum);
     //show life style images at the top of every hour
@@ -70,6 +71,34 @@ function getMattressData(hour, minute){
     var index = timeNum%mattress_data.length;
     return mattress_data[index];
     // return minute;
+}
+function getHashIndexForTime(dayOfYear, hour, minute){
+    var mult = hour*minute;
+    var div = minute/hour;
+    var extrawild = mult+div;
+    var numStr = "min" + hour.toString() + minute.toString() + dayOfYear.toString() + extrawild.toString();
+    var timeNum = simpleHash(numStr);
+    return timeNum;
+}
+
+function testHash(){
+    var count = mattress_data.length;
+    var plotVals = Array.from({ length: count }, () => 0);
+
+    //test values
+    var days = 365;
+    var hours = 24;
+    var minutes = 60;
+    for(var d=0; d<days; d++){
+        for(var h=0; h<hours; h++){
+            for(var m=0; m<minutes; m++){
+                var v = getHashIndexForTime(d, h, m);
+                var index = v%count;
+                plotVals[index] += 1;
+            }
+        }
+    }
+    return plotVals;
 }
 
 function filterMattressData(tag){

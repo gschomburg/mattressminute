@@ -101,18 +101,18 @@ body, html {
     height: .35em;
     /* background-color: red; */
   }
-  .tick-bar
+  #tick-bar
   {
     position: relative;
     width: 100%;
     height: 100%;
     background-color: #fff;
-    transition: width 0.8s ease-in-out
+    transition: width 0.5s ease-out
   }
-  .down .tick-bar
+  /* .down .tick-bar
   {
     width: 5%;
-  }
+  } */
 
   #m-image-preload{
     display: none;
