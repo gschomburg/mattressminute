@@ -10,8 +10,8 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="styles_sitemap.css">
+    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles_sitemap.css">
 	<title>Mattress Minute Sitemap</title>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,12 +28,17 @@
         </div>
     </ul>
     <div id="options">
-        <button>by date</button>
-        <button>by id</button>
-        <button id="get-selected-button">getSelected</button>
-        <button id="unselect-all-button">unSelectAll</button>
+        <!-- <button>by date</button> -->
+        <!-- <button>by id</button> -->
+        <button id="select-all-button">Select All</button>
+        <button id="unselect-all-button">UnSelect All</button>
+        <button id="copy-selected-button">Copy to Clipboard</button>
         <div id="details">
-            file count: 1000
+            sort:<select id="view-select">
+                    <option value="sort-time">by time</option>
+                    <option value="sort-id">by id</option>
+              </select>
+            <div id="file-count"></div>
         </div>
         <!-- <div id="contentToCopy" style="display: none;">Text to copy</div> -->
     </div>

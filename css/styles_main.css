@@ -26,6 +26,17 @@ body, html {
 {
     margin-bottom: 10px;
 }
+.text-button {
+  font-size: .8em;
+  font-weight: 800;
+  margin-right: 10px; /* Add margin between buttons */
+  background-color: #111;
+  padding: 6px;
+  color: #fff;
+}
+.text-button:hover {
+  background-color: #444;
+}
 #dropdown
 {
     display: none;
@@ -135,6 +146,11 @@ body, html {
   #info-display
   {
     font-size: 2vmax;
+    pointer-events: none;
+  }
+  #info-display a
+  {
+    pointer-events: auto;
   }
   /*meta text styles*/
   .time{

@@ -1,4 +1,5 @@
 function buildPage(dataArray) {
+    console.log("building");
     var contentDiv = document.getElementById('content');
 
     var details={};
@@ -11,10 +12,10 @@ function buildPage(dataArray) {
 
         var imagelink = document.createElement('a');
         imagelink.href = imagePath(data);
+        imagelink.target="_blank";
 
         var image = document.createElement('img');
         image.src = thumbPath(data); //.filename;
-    //   image.alt = data.id; // Use a relevant attribute for alt text
 
         var checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
@@ -27,34 +28,101 @@ function buildPage(dataArray) {
             }else{
                 li.classList.remove('selected');
             }
-            // li.classList.toggle('selected');
         });
-        // onchange="handleCheckboxChange(this)"
         checkbox.value = data.id; // Assuming 'id' is the unique identifier for each item
 
-        var description = document.createElement('p');
+        var img_data = document.createElement('div');
         // var additionalMeta = `${data.filename}<br/>size:${data.width}x${data.height}<br/>set: ${data.data_set}.json`;
-        var tagStr="";
-        if(data.tags!=null && data.tags!=undefined){
-            tagStr = `<br/>tags: ${data.tags}`
-        }
-        description.innerHTML = `${data.filename}<br/>${formatMetaData(data)}<br/>size:${data.width}x${data.height}<br/>set: ${data.data_set}.json${tagStr}`; //`ID: ${data.id}<br/>Taken with: ${data.make} ${data.model}<br/>${data.date_taken}`;
+        // var tagStr="";
+        // if(data.tags!=null && data.tags!=undefined){
+        //     tagStr = `<br/>tags: ${data.tags}`
+        // }
+        img_data.classList.add('img-data');
+
+        
+        var titleIn = createTextInput('title-'+data.id, 'title:');
+        img_data.append(titleIn.label);
+        img_data.append(titleIn.input);
+        img_data.innerHTML += '<br/>';
+        var tagsIn = createTextInput('tags-'+data.id, 'tags:');
+        img_data.append(tagsIn.label);
+        img_data.append(tagsIn.input);
+
+        img_data.innerHTML += `<br/>${data.filename}<br/>${formatMetaData(data)}<br/>size:${data.width}x${data.height}<br/>set: ${data.data_set}.json<br/>`; //`ID: ${data.id}<br/>Taken with: ${data.make} ${data.model}<br/>${data.date_taken}`;
 
         // Append elements to the container
         imagelink.append(image);
         container.appendChild(imagelink);
-        container.appendChild(description);
+        // container.appendChild(tagsIn);
+        container.appendChild(img_data);
         container.appendChild(checkbox);
 
         // Append the container to the main content div
         contentDiv.appendChild(container);
+
+        // tagsIn.input.value = "HERE?";
+        // console.log(tagsIn.input);
+        // console.log(tagsIn.input.value);
+        //add listeners
     });
 
     updateDetails(details);
+    setInputContent();
+}
+function setInputContent(){
+    mattress_data.forEach(function(data) {
+        var tagsEL = document.getElementById('tags-'+data.id);
+        if(tagsEL){
+            if(data.tags){
+                tagsEL.value=data.tags;
+            }
+            tagsEL.addEventListener('change', function() {
+                // Get the id and new tags value
+                var id = data.id;  // Replace with the actual id from your input
+                var newValue = tagsEL.value;
+                updateDB(id, 'tags', newValue);
+            });
+        }
+        var titleEL = document.getElementById('title-'+data.id);
+        if(titleEL ){
+            if(data.title){
+                titleEL.value=data.title;
+            }
+            titleEL.addEventListener('change', function() {
+                // Get the id and new tags value
+                var id = data.id;  // Replace with the actual id from your input
+                var newValue = titleEL.value;
+                updateDB(id, 'title', newValue);
+            });
+        }
+    });
+}
+function updateDB(id, key, value){
+    //set the key value for that img id
+    var foundObject = mattress_data.find(obj => obj.id === id);
+    if (foundObject) {
+        foundObject[key] = value;
+        console.log('Tags updated for object with id:', id);
+        console.log(key, value);
+        // console.log('Updated array:', mattress_data);
+    }
+}
+function createTextInput(elID, labelText){
+
+    var label = document.createElement('label')
+    label.textContent = labelText;
+    label.setAttribute('for', elID);
+    // var label = document.createElement('label');
+    var tInput = document.createElement('input');
+    tInput.type = 'text';
+    tInput.id = elID;
+    tInput.placeholder = 'none'
+    //set the content of the fields later for some reason setting here does not work
+    return {'label':label, 'input':tInput};
 }
 function updateDetails(details)
 {
-    const detailsEl = document.getElementById('details');
+    const detailsEl = document.getElementById('file-count');
     var formatted="";
 
     if(details.count != null){
@@ -64,7 +132,7 @@ function updateDetails(details)
 }
 
 //actions
-function getSelectedItems() {
+function copySelectedItems() {
     var selectedIds = [];
 
     // Get all checkboxes
@@ -83,6 +151,20 @@ function getSelectedItems() {
     // alert("Copied to clipboard: " + content);
 
     return selectedIds;
+}
+function selectAll(){
+    var checkboxes = document.querySelectorAll('.data-container input[type="checkbox"]');
+    checkboxes.forEach(function (checkbox) {
+        // selectedIds.push(checkbox.value);
+        checkbox.checked = true;
+    });
+    //remove classes from li
+    var items = document.querySelectorAll('.data-container');
+    items.forEach(function (item) {
+        // selectedIds.push(checkbox.value);
+        // checkbox.checked = false;
+        item.classList.add('selected');
+    });
 }
 function unSelectAll(){
     var checkboxes = document.querySelectorAll('.data-container input[type="checkbox"]:checked');
@@ -145,22 +227,29 @@ function init()
     plotDataDist();
 
     //ui actions
-    document.getElementById('get-selected-button').addEventListener('click', function() {
-        var dataItems = getSelectedItems();
+    document.getElementById('copy-selected-button').addEventListener('click', function() {
+        var dataItems = copySelectedItems();
         console.log(dataItems);
 
     });
     document.getElementById('unselect-all-button').addEventListener('click', function() {
-        console.log(unSelectAll());
+        unSelectAll()
+        // console.log(unSelectAll());
+    });
+    document.getElementById('select-all-button').addEventListener('click', function() {
+        // console.log(unSelectAll());
+        selectAll();
     });
     //
 }
-
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOMContentLoaded");
+}, false);
 loadImageData().then((imageData) => {
     console.log('loaded');
     mattress_data = imageData;
     // console.log(mattress_data[0].id, mattress_data[1].id, mattress_data[2].id);
     mattress_data.sort(sortByDate);
+    // alert("loaded!");
     init();
-    
 });

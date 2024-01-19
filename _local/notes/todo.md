@@ -6,13 +6,20 @@
 - other mobile stuff
 - min max css stuff
 
-- move styles to styles folder
+<!-- - move styles to styles folder -->
 
-- maybe bug in transition on mac chrome?
+<!-- - maybe bug in transition on mac chrome? -->
+
+- admin ui
+    - go through images sequentially
+        - next and back
+        - check box control
+    - add a way to add 'captions/titles'
+    - add a way to export the current db
 
 - site map
-    - select all
-    - edit tags with field
+    <!-- - select all -->
+    <!-- - edit tags with field -->
     - sort by id or by date
         - turn into a drop down select box
 <!-- - add ui for selecting photos in sitemap and a way to output selected datas -->
@@ -30,6 +37,7 @@
 
 - url params
     - dark mode light mode
+    - admin
     - view type
     - savable from url string
 

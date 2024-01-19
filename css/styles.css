@@ -25,7 +25,11 @@ a{
   color: #fff;
   border-bottom: .1em dashed #fff;
 }
-
+label{
+  font-size: .7em;
+  font-weight: 800;
+  line-height: 2em;
+}
 button, input[type="submit"], input[type="reset"] {
 	background: none;
 	color: inherit;

@@ -1,6 +1,7 @@
 var data_sets = [
     '2024_01_12'
 ]
+var mattress_data=[]
 
 async function loadImageData() {
     try {
@@ -157,7 +158,11 @@ function formatMetaData(data){
     // const metaDisplay = document.getElementById('meta-display');
     formatted = "";
     if(data.id!=null){
-    formatted += `${data.id}<br>`
+        var title = 'untitled'
+        if(data.title){
+            title = data.title;
+        }
+    formatted += `${data.id}, ${title}<br>`
     }
     if(data.lat_long_dms != null){
     let formLatLong = formatLatLong(data.lat_long_dms)
