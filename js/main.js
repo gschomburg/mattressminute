@@ -219,7 +219,8 @@ var currentHour=-1
 var currentMinute=-1;
 
 loadImageData().then((imageData) => {
-  console.log('loaded');
+  console.log('loaded:');
+  // console.log(imageData);
   mattress_data = imageData;
   // console.log(mattress_data);
   loading = false;

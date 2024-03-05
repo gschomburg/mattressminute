@@ -9,7 +9,8 @@
 	<meta property="og:url" content="https://mattressminute.com">
 	<meta property="og:type" content="website">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="../css/styles.css">
 	<link rel="stylesheet" href="../css/styles_titles.css">
 	<title>TITLES Mattress Minute</title>
@@ -19,14 +20,33 @@
 	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap" rel="stylesheet">
 </head>
 	<body class="light-mode view-fit">
-		<img src="images/const1.jpg" alt="alt image description" id="m-image-preload">
+		<!-- <img src="images/const1.jpg" alt="alt image description" id="m-image-preload"> -->
 
-		<div class="centered-square transition-fix" id="image-container">
-			<img src="images/const1.jpg" alt="a photo of a mattress" class="image transition-fix" id="m-image">
-			<img src="images/const1.jpg" alt="transition only" class="image transition-fix" id="m-image-trans" >
-		</div>
-		<div>
-			<!-- form -->
+		<div class="content">
+			<div class="centered-square transition-fix" id="image-container">
+				<img src="images/const1.jpg" alt="a photo of a mattress" class="image transition-fix" id="m-image">
+				<!-- <img src="images/const1.jpg" alt="transition only" class="image transition-fix" id="m-image-trans" > -->
+			</div>
+			<div id="controls">
+				<form id="updateForm">
+					<div class="ui-container">
+						<input type="text" id="titleInput" name="titleInput" placeholder="Untitled">
+						<button type="submit" id="submit-button" class="">Submit</button>
+					</div>
+				</form>
+				<div class="ui-container">
+					<button id="prev-button" class="ui-button">Previous</button>
+					<button id="rand-button" class="ui-button">Random</button>
+					<button id="next-button" class="ui-button">Next</button>
+				</div>
+				<div class="ui-container">
+					<div class="checkbox-container">
+						<label for="needsTitle" class="checkbox-label">Hide Titled:</label>
+						<input type="checkbox" class="custom-checkbox" id="needsTitle" name="needsTitle">
+					</div>
+				</div>
+			</div>
+			<div id="data-display">hello</div>
 		</div>
 		<!-- <div class="bottom-left" id="info-display">
 			<h2 id="time-display" class="time">00:00 MM</h2>

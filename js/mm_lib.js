@@ -4,13 +4,22 @@ var data_sets = [
 var mattress_data=[]
 
 async function loadImageData() {
+    var path = 'https://mattressminute.com/data/';
     try {
-        const imageData = await mergeJsonFiles(data_sets);
+        const response = await fetch(path + 'mattress.php');
+        const imageData = await response.json();
         return imageData;
     } catch (error) {
         console.error('Error loading image data:', error);
         return [];
     }
+    // try {
+    //     const imageData = await mergeJsonFiles(data_sets);
+    //     return imageData;
+    // } catch (error) {
+    //     console.error('Error loading image data:', error);
+    //     return [];
+    // }
 }
 async function mergeJsonFiles(jsonFiles) {
     try {
@@ -162,7 +171,7 @@ function formatMetaData(data){
         if(data.title){
             title = data.title;
         }
-    formatted += `${data.id}, ${title}<br>`
+    formatted += `${data.id}<br>${title}<br>`
     }
     if(data.lat_long_dms != null){
     let formLatLong = formatLatLong(data.lat_long_dms)
@@ -178,6 +187,7 @@ function formatMetaData(data){
 }
 
 //get the image paths
+// const imageFolder = '2024_01_12'; //todo rename this later all images will be in this folder... maybe
 function imagePath(data){
     const path = 'images';
     // const subpath = '2024_01_12/';

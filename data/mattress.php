@@ -2,7 +2,12 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-include 'config.php';
+require_once 'config.php';
+
+// Handle CORS
+header("Access-Control-Allow-Origin: *"); // Allow requests from any origin
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS"); // Allow GET, POST, OPTIONS requests
+header("Access-Control-Allow-Headers: Content-Type"); // Allow the Content-Type header
 
 /*
 //config.php//
