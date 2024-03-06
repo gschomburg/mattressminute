@@ -91,6 +91,7 @@ function loadRandom(){
     load(null, undefined, needsTitleOnly);
 }
 function load(_uId, _offset, _needsTitle){
+    hideResponseText();
     //if uId is null it's random
     var script = 'mattress.php';
     let url = path + script +`?uId=${_uId}`;
@@ -178,6 +179,12 @@ function setupForm()
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 if (xhr.status === 200) {
                     console.log(xhr.responseText);
+                    const response = JSON.parse(xhr.responseText);
+                    showResponseText(response.info, response.success);
+                    // if(response.success === 1){
+                    // }else{
+                    //     showResponseText(response.info, false);
+                    // }
                     // document.getElementById("response").textContent = xhr.responseText;
                 } else {
                     console.log('error: ' + xhr.statusText);
@@ -190,6 +197,23 @@ function setupForm()
         console.log(JSON.stringify(formData));
         xhr.send(JSON.stringify(formData));
     });
+}
+function showResponseText(responseInfo, success){
+    var responseText = document.getElementById("response-text");
+    responseText.textContent=responseInfo;
+    // console.log(responseInfo);
+    if(success==0){
+        responseText.classList.add('error');
+    }else{
+        responseText.classList.remove('error');
+    }
+    responseText.classList.remove('hide');
+
+    //add a timeout to hide it?
+}
+function hideResponseText(){
+    var responseText = document.getElementById("response-text");
+    responseText.classList.add('hide');
 }
 function setupControls(){
     var checkbox = document.getElementById("needsTitle");

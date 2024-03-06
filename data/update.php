@@ -27,7 +27,15 @@ if ($conn->connect_error) {
 // Function to update the title of a mattress record
 function updateMattressTitle($conn, $uId, $title, $secretKey) {
     if ($secretKey !== 'weareworkingallthetime') {
-        return "{'result':0, 'error': 'Unauthorized access'}";
+        return json_encode(array("success" => 0, "info" => "Unauthorized access; key not found."));
+        // return "{'success':0, 'info': 'Unauthorized access; key not found.'}";
+        // return "{'result':0, 'error': 'Unauthorized access'}";
+    }
+    $existingTitle = getTitleByUid($conn, $uId); // You need to implement this function
+    if ($existingTitle === $title) {
+        // return "{'success':1, 'info': 'Mattress " + $uId + " already set to " + $title + ".'}";
+        return json_encode(array("success" => 1, "info" => "Mattress " . $uId . " already set to '" . $title . "'"));
+        // return "{'success':1, 'info': 'no changes'}";
     }
     // Prepare and execute a SQL query to update the title of the mattress record
     $sql = "UPDATE mattresses SET title = ? WHERE uId = ?";
@@ -38,10 +46,31 @@ function updateMattressTitle($conn, $uId, $title, $secretKey) {
     // Check if the update was successful
     if ($stmt->affected_rows > 0) {
         // return "Title updated successfully";
-        return "{'result':1}"; 
+        // return "{'result':1}";
+        // return "{'success':1, 'info': 'Mattress id:" + $uId + " updated.'}";
+        return json_encode(array("success" => 1, "info" => "Mattress id:" . $uId . " updated."));
     } else {
         // return "Error: Failed to update title";
-        return "{'result':0}";
+        // return "{'success':0, 'info': 'Update failed.'}";
+        return json_encode(array("success" => 0, "info" => "Update failed."));
+    }
+}
+function getTitleByUid($conn, $uId) {
+    // Prepare and execute a SQL query to retrieve the title of the mattress record by uId
+    $sql = "SELECT title FROM mattresses WHERE uId = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $uId); // Assuming uId is an integer
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Fetch the title from the result set
+    $row = $result->fetch_assoc();
+
+    // Check if the query returned a row
+    if ($row) {
+        return $row['title'];
+    } else {
+        return null; // or handle appropriately if no title is found
     }
 }
 
