@@ -124,6 +124,10 @@ function getRandomData(){
 
 //https://www.google.com/maps/place/40%C2%B043'22.8%22N+73%C2%B056'40.8%22W
 function formatLatLong(latLongString) {
+    if(latLongString == null || latLongString==""){
+        return null;
+    }
+    // console.log('formatLatLong: ' + latLongString);
     // Split the string into latitude and longitude parts
     const [latPart, longPart] = latLongString.split('+');
     
@@ -173,9 +177,10 @@ function formatMetaData(data){
         }
     formatted += `${data.id}<br>${title}<br>`
     }
-    if(data.lat_long_dms != null){
-    let formLatLong = formatLatLong(data.lat_long_dms)
-    formatted+=`<a href="${formLatLong.googleMapsLink}" target="_blank">${formLatLong.formattedString}</a><br>`;
+    if(data.lat_long_dms != null && data.lat_long_dms!="")
+    {
+        let formLatLong = formatLatLong(data.lat_long_dms)
+        formatted+=`<a href="${formLatLong.googleMapsLink}" target="_blank">${formLatLong.formattedString}</a><br>`;
     }
     if(data.make != null){
     formatted+=`${data.make} ${data.model}<br>`;

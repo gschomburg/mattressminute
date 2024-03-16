@@ -11,11 +11,21 @@
 <!-- - maybe bug in transition on mac chrome? -->
 
 - admin ui
-    - go through images sequentially
-        - next and back
-        - check box control
-    - add a way to add 'captions/titles'
-    - add a way to export the current db
+    <!-- - go through images sequentially -->
+    <!-- - next and back -->
+    <!-- - check box control -->
+    <!-- - add a way to add 'captions/titles' -->
+    <!-- - add a way to export the current db -->
+
+
+- php
+    - add tags update
+    - make sure date modified updates on update
+
+- sitemap
+    - add php calls to sitemap to update fields tags + title
+    - add new image upload
+    - add date modified to sort (asc/desc)
 
 - site map
     <!-- - select all -->
@@ -27,6 +37,9 @@
 - add info
     - gregnet project
     - links
+    - thank yous
+        - piotr
+        - caleb
 <!-- - make menu design better
     - ? polish up ?
     - menu icon instead of text? -->
